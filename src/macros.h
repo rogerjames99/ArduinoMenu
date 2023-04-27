@@ -174,10 +174,10 @@ Menu::idx_t id##Tops##n[md];\
 PANELS(id##Panels##n,__VA_ARGS__);\
 Menu::utftOut id##n(gfx,color,id##Tops##n,id##Panels##n,fontW,fontH);
 
-#define VAR_SSD1306ASCII_OUT(id,md,n,oled,fontW,fontH,...)\
+#define VAR_SSD1306ASCII_OUT(id,md,n,oled,resX,resY,...)\
 Menu::idx_t id##Tops##n[md];\
 PANELS(id##Panels##n,__VA_ARGS__);\
-Menu::SSD1306AsciiOut id##n(&oled,id##Tops##n,id##Panels##n,fontW,fontH);
+Menu::SSD1306AsciiOut id##n(&oled,id##Tops##n,id##Panels##n,resX,resY);
 
 #define REF_HEAD_NONE(...)
 #define REF_SERIAL_OUT(id,md,n,...) &id##n,
